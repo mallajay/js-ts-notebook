@@ -7,7 +7,9 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "Bash(npm install:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(ls:*)",
+      "Bash(npx @vscode/vsce publish patch)"
     ]
   }
 }
