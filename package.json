@@ -2,7 +2,7 @@
   "name": "jstsnotebook",
   "displayName": "JS/TS Notebook",
   "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publisher": "ajaymall",
   "repository": {
     "type": "git",
