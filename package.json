@@ -2,7 +2,7 @@
   "name": "jstsnotebook",
   "displayName": "JS/TS Notebook",
   "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "ajaymall",
   "repository": {
     "type": "git",
@@ -18,7 +18,14 @@
     "color": "#1e1e1e",
     "theme": "dark"
   },
-  "keywords": ["notebook", "javascript", "typescript", "repl", "interactive", "jupyter"],
+  "keywords": [
+    "notebook",
+    "javascript",
+    "typescript",
+    "repl",
+    "interactive",
+    "jupyter"
+  ],
   "engines": {
     "vscode": "^1.85.0"
   },
