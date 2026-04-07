@@ -12,7 +12,8 @@
       "Bash(npx @vscode/vsce publish patch)",
       "Bash(npx @vscode/vsce ls)",
       "WebFetch(domain:marketplace.visualstudio.com)",
-      "Bash(code:*)"
+      "Bash(code:*)",
+      "Bash(npx @vscode/vsce publish --no-dependencies)"
     ]
   }
 }
