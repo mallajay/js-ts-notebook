@@ -1,5 +1,7 @@
 # JS/TS Notebook
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ajaymall.jstsnotebook?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook)
+
 A VS Code extension that brings Jupyter-style interactive notebooks to JavaScript and TypeScript. Write code in blocks, run them one at a time or all at once, and see rich output inline — with shared state across cells.
 
 ---
