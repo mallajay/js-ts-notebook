@@ -1,3 +1,4 @@
+.vscode/
 src/
 node_modules/
 tsconfig*.json
@@ -6,5 +7,3 @@ esbuild.mjs
 .vscodeignore
 testNotebooks/
 **/*.map
-**/*.ts
-!src/**

@@ -3,7 +3,7 @@
   "displayName": "JS/TS Notebook",
   "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
   "version": "0.1.0",
-  "publisher": "jstsnotebook",
+  "publisher": "ajaymall",
   "engines": {
     "vscode": "^1.85.0"
   },
