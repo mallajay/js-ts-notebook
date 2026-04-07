@@ -198,10 +198,9 @@
     "watch": "node esbuild.mjs --watch",
     "package": "npx @vscode/vsce package --no-dependencies"
   },
-  "dependencies": {
-    "typescript": "^5.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "typescript": "^5.4.0",
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
     "@types/vscode-notebook-renderer": "^1.72.0",
