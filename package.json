@@ -4,11 +4,27 @@
   "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
   "version": "0.1.1",
   "publisher": "ajaymall",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mallajay/js-ts-notebook"
+  },
+  "bugs": {
+    "url": "https://github.com/mallajay/js-ts-notebook/issues"
+  },
+  "homepage": "https://github.com/mallajay/js-ts-notebook#readme",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "keywords": ["notebook", "javascript", "typescript", "repl", "interactive", "jupyter"],
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Notebooks"
+    "Notebooks",
+    "Programming Languages"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",

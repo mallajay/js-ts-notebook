@@ -1,4 +1,5 @@
 .vscode/
+.claude/
 src/
 docs/
 node_modules/
@@ -8,3 +9,6 @@ esbuild.mjs
 .vscodeignore
 testNotebooks/
 **/*.map
+*.vsix
+index.js
+mcp-cursor-executed.txt
