@@ -2,7 +2,7 @@
   "name": "jstsnotebook",
   "displayName": "JS/TS Notebook",
   "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "ajaymall",
   "repository": {
     "type": "git",
@@ -171,13 +171,6 @@
         }
       ]
     },
-    "iconThemes": [
-      {
-        "id": "jstsnotebook-icon-theme",
-        "label": "JS/TS Notebook Icons",
-        "path": "./media/jsnb-icon-theme.json"
-      }
-    ],
     "snippets": [
       {
         "language": "javascript",
