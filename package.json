@@ -33,7 +33,9 @@
     "Notebooks",
     "Programming Languages"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onNotebook:jstsnotebook"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "viewsContainers": {
