@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "_jsnb_file": {
+      "iconPath": "./jsnb-file-icon.svg"
+    }
+  },
+  "fileExtensions": {
+    "jsnb": "_jsnb_file"
+  }
+}

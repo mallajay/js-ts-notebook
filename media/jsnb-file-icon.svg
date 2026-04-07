@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- File background -->
+  <rect x="3" y="2" width="20" height="26" rx="2.4" fill="#1e1e1e" stroke="#f0db4f" stroke-width="1.2"/>
+  <!-- Folded corner -->
+  <path d="M17 2 L23 8 L17 8 Z" fill="#f0db4f" opacity="0.6"/>
+  <!-- JS label -->
+  <text x="7" y="20" font-family="monospace" font-size="11" font-weight="bold" fill="#f0db4f">JS</text>
+  <!-- Bottom accent line -->
+  <rect x="6" y="23" width="12" height="1.4" rx="0.7" fill="#f0db4f" opacity="0.5"/>
+</svg>
