@@ -1,8 +1,28 @@
 # JS/TS Notebook
 
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ajaymall.jstsnotebook?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/ajaymall.jstsnotebook)](https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**[Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook)**
 
 A VS Code extension that brings Jupyter-style interactive notebooks to JavaScript and TypeScript. Write code in blocks, run them one at a time or all at once, and see rich output inline — with shared state across cells.
+
+---
+
+## Install
+
+Search for **JS/TS Notebook** in the VS Code Extensions panel, or install directly from the Marketplace:
+
+**[https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook](https://marketplace.visualstudio.com/items?itemName=ajaymall.jstsnotebook)**
+
+Or via the CLI:
+
+```bash
+code --install-extension ajaymall.jstsnotebook
+```
+
+Once installed, open any `.jsnb` file or create a new one via **Command Palette → New File → JS/TS Notebook**.
 
 ---
 
@@ -36,10 +56,10 @@ A VS Code extension that brings Jupyter-style interactive notebooks to JavaScrip
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org) v18 or later
 - [VS Code](https://code.visualstudio.com) v1.85 or later
+- [Node.js](https://nodejs.org) v18 or later (required at runtime — the kernel runs your code in Node)
 
-### Install and build
+### Development setup
 
 ```bash
 npm install
