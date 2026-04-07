@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "cells": [
+    {
+      "kind": "markdown",
+      "language": "markdown",
+      "source": "# JS/TS Notebook — Sample\n\nThis notebook demonstrates shared state between cells, `console.log` output, TypeScript support, and return values.",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "code",
+      "language": "javascript",
+      "source": "// Variables defined here are available in all subsequent cells\nconst x = [1, 2, 3, 4, 5];\nconsole.log('x =', x);",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "markdown",
+      "language": "markdown",
+      "source": "## TypeScript cell\n\nThe cell below uses TypeScript syntax and accesses `x` from the previous cell.",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "code",
+      "language": "typescript",
+      "source": "const double = (n: number): number => n * 2;\nconst result = x.map(double);\nconsole.log('doubled:', result);\nreturn result;",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "code",
+      "language": "javascript",
+      "source": "// require() works — try a built-in module\nconst path = require('path');\nconsole.log('path.sep:', path.sep);\nreturn path.join('foo', 'bar', 'baz');",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "code",
+      "language": "javascript",
+      "source": "// Async/await is supported at the top level\nconst data = await new Promise((resolve) =>\n  setTimeout(() => resolve({ status: 'ok', value: 42 }), 100)\n);\nreturn data;",
+      "outputs": [],
+      "metadata": {}
+    },
+    {
+      "kind": "code",
+      "language": "javascript",
+      "source": "// This cell throws — see the styled error output below\nthrow new Error('Something went wrong!');",
+      "outputs": [],
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "kernelspec": "jstsnotebook"
+  }
+}

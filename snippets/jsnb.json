@@ -1,0 +1,74 @@
+{
+  "Async fetch": {
+    "prefix": "jsnb-fetch",
+    "body": [
+      "const res = await fetch('${1:https://api.example.com/data}');",
+      "const data = await res.json();",
+      "return data;"
+    ],
+    "description": "Fetch JSON from a URL with top-level await"
+  },
+  "Require module": {
+    "prefix": "jsnb-require",
+    "body": [
+      "const ${1:name} = require('${2:module}');"
+    ],
+    "description": "Require a Node.js module"
+  },
+  "Display HTML": {
+    "prefix": "jsnb-display",
+    "body": [
+      "$$display(`${1:<b>Hello</b>}`);"
+    ],
+    "description": "Render inline HTML with $display()"
+  },
+  "Display image": {
+    "prefix": "jsnb-image",
+    "body": [
+      "const fs = require('fs');",
+      "const img = fs.readFileSync('${1:image.png}');",
+      "$$image(img${2:, 'image/png'});"
+    ],
+    "description": "Display an image file inline with $image()"
+  },
+  "Console table": {
+    "prefix": "jsnb-table",
+    "body": [
+      "console.table([",
+      "\t{ ${1:name}: '${2:Alice}', ${3:score}: ${4:95} },",
+      "\t{ ${1:name}: '${2:Bob}',   ${3:score}: ${4:82} },",
+      "]);"
+    ],
+    "description": "Render an array of objects as an HTML table"
+  },
+  "Cell timer": {
+    "prefix": "jsnb-time",
+    "body": [
+      "const _t0 = Date.now();",
+      "${1:// your code here}",
+      "return `done in \\${Date.now() - _t0} ms`;"
+    ],
+    "description": "Measure elapsed time for code in this cell"
+  },
+  "Try/catch async": {
+    "prefix": "jsnb-try",
+    "body": [
+      "try {",
+      "\t${1:const result = await someAsyncCall();}",
+      "\treturn ${2:result};",
+      "} catch (err) {",
+      "\tconsole.error(err.message);",
+      "}"
+    ],
+    "description": "Async try/catch block"
+  },
+  "Read file": {
+    "prefix": "jsnb-readfile",
+    "body": [
+      "const fs = require('fs');",
+      "const content = fs.readFileSync('${1:file.txt}', 'utf8');",
+      "return content;"
+    ],
+    "description": "Read a file synchronously"
+  }
+}

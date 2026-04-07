@@ -1,0 +1,187 @@
+{
+  "name": "jstsnotebook",
+  "displayName": "JS/TS Notebook",
+  "description": "Jupyter-like interactive notebooks for JavaScript and TypeScript",
+  "version": "0.1.0",
+  "publisher": "jstsnotebook",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Notebooks"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "jstsnotebook-sidebar",
+          "title": "JS/TS Notebook",
+          "icon": "$(symbol-variable)"
+        }
+      ]
+    },
+    "views": {
+      "jstsnotebook-sidebar": [
+        {
+          "id": "jstsnotebook.variableInspector",
+          "name": "Variables",
+          "type": "webview"
+        }
+      ]
+    },
+    "notebooks": [
+      {
+        "type": "jstsnotebook",
+        "displayName": "JS/TS Notebook",
+        "selector": [
+          {
+            "filenamePattern": "*.jsnb"
+          }
+        ]
+      }
+    ],
+    "notebookRenderer": [
+      {
+        "id": "jstsnotebook-error-renderer",
+        "displayName": "JS/TS Notebook Error Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/vnd.jsnb.error+json"
+        ]
+      },
+      {
+        "id": "jstsnotebook-return-renderer",
+        "displayName": "JS/TS Notebook Return Value Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/vnd.jsnb.return+json"
+        ]
+      },
+      {
+        "id": "jstsnotebook-timing-renderer",
+        "displayName": "JS/TS Notebook Timing Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/vnd.jsnb.timing+json"
+        ]
+      },
+      {
+        "id": "jstsnotebook-table-renderer",
+        "displayName": "JS/TS Notebook Table Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/vnd.jsnb.table+json"
+        ]
+      },
+      {
+        "id": "jstsnotebook-chart-renderer",
+        "displayName": "JS/TS Notebook Chart Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "application/vnd.jsnb.chart+json"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "jstsnotebook.restartKernel",
+        "title": "JS/TS Notebook: Restart Kernel",
+        "icon": "$(debug-restart)"
+      },
+      {
+        "command": "jstsnotebook.clearOutputs",
+        "title": "JS/TS Notebook: Clear All Outputs"
+      },
+      {
+        "command": "jstsnotebook.exportScript",
+        "title": "JS/TS Notebook: Export as Script",
+        "icon": "$(export)"
+      },
+      {
+        "command": "jstsnotebook.exportHtml",
+        "title": "JS/TS Notebook: Export as HTML",
+        "icon": "$(globe)"
+      },
+      {
+        "command": "jstsnotebook.runSelection",
+        "title": "JS/TS Notebook: Run Selected Text"
+      },
+      {
+        "command": "jstsnotebook.showDocs",
+        "title": "JS/TS Notebook: Open Docs",
+        "icon": "$(book)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jstsnotebook.runSelection",
+        "key": "ctrl+shift+enter",
+        "mac": "cmd+shift+enter",
+        "when": "notebookEditorFocused && notebookType == jstsnotebook && editorHasSelection"
+      }
+    ],
+    "menus": {
+      "notebook/toolbar": [
+        {
+          "command": "jstsnotebook.restartKernel",
+          "when": "notebookType == jstsnotebook",
+          "group": "navigation"
+        },
+        {
+          "command": "jstsnotebook.exportScript",
+          "when": "notebookType == jstsnotebook",
+          "group": "navigation"
+        },
+        {
+          "command": "jstsnotebook.exportHtml",
+          "when": "notebookType == jstsnotebook",
+          "group": "navigation"
+        },
+        {
+          "command": "jstsnotebook.showDocs",
+          "when": "notebookType == jstsnotebook",
+          "group": "navigation"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/jsnb.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/jsnb.json"
+      }
+    ],
+    "configuration": {
+      "title": "JS/TS Notebook",
+      "properties": {
+        "jstsnotebook.executionTimeoutMs": {
+          "type": "number",
+          "default": 30000,
+          "minimum": 1000,
+          "description": "Maximum execution time per cell in milliseconds (default: 30000)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "package": "npx @vscode/vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@types/vscode-notebook-renderer": "^1.72.0",
+    "@vscode/vsce": "^2.24.0",
+    "chart.js": "^4.5.1",
+    "esbuild": "^0.20.0"
+  }
+}
